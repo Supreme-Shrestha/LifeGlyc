@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life-Glyc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="title">Life-Glyc</div>
+    <div class="options">
+        <a href="#fadeImage">Home</a>
+        <a href="#About">About</a>
+        <a href="https://huggingface.co/spaces/Jegree/LifeGlyc">Test Diabetes</a>
+    </div>
+</div>
+
+<div class="hero" id="fadeImage">
+    <div class="fade" id="fadeOverlay"></div>
+</div>
+
+<div id="content">
+    <h1 style="text-align: center;">Welcome to <i>Life-Glyc</i></h1>
+    <h3 style="margin-top: -3vh; color: #5b5454; text-align: center;">"your partner in the fight against diabetes"</h3>
+    <br><br>
+    <h2>Diabetes is a growing global health challenge, affecting millions every year. Early detection is critical to managing and preventing complications, yet many individuals remain undiagnosed until it’s too late. The lack of accessible, affordable, and simple screening methods often delays necessary interventions.</h2>
+    <h2>Life-Glyc bridges this gap by offering an easy-to-use, web-based tool for early diabetes detection. Using essential health parameters such as number of pregnancies, height, weight, family diabetic history, glucose level, and age, our app employs advanced algorithms to assess your risk.
+
+        This solution empowers you to take proactive steps toward your health by providing timely insights. Whether you're an individual seeking clarity or a healthcare provider aiming for enhanced screening, Life-Glyc is here to make a difference.</h2>
+    
+    <br><hr>
+    <h1 id = "About"><b>About this project</b></h1>
+    <h2>Our project aims to tackle the increasing prevalence of Type 2 diabetes by offering an innovative early detection tool. Leveraging advancements in machine learning, we have trained a Random Forest Classifier model to assess an individual’s risk of developing Type 2 diabetes.
+
+        The model is built on key health parameters that are simple to obtain, such as the number of pregnancies, height, weight, family diabetic history, glucose level, and age. By analyzing these features, the model provides a reliable risk assessment, enabling users to take timely action and make informed health decisions.<h2>
+
+    <br>
+</div>
+
+<script>
+    const fadeOverlay = document.getElementById('fadeOverlay');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const fadeStart = 200; // Adjust this for when the fade starts
+        const fadeEnd = 700; // Adjust this for when the fade ends
+        const minOpac = 0.2;
+
+        var opacity = 1;
+        if(scrollTop>fadeEnd){
+            opacity = minOpac;
+        }else if(scrollTop<fadeStart){
+            opacity = 1;
+        }else{
+            opacity = (1-(scrollTop-fadeStart)/(fadeEnd-fadeStart))*(1-minOpac) + minOpac;
+        }
+        fadeOverlay.style.opacity = opacity;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: orange;
+    margin-left: 20px;
+}
+
+.top-bar .options {
+    display: flex;
+    gap: 45px;
+    margin-right: 80px; /* Adjusted to move options 80px left */
+}
+
+.top-bar .options a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.hero {
+    position: relative;
+    height: 75vh;
+    background-image: url('./images/fotu1.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.fade {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    mix-blend-mode: lighten;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#content {
+    padding: 50px;
+    min-height: 200vh;
+    padding-top: 70px; /* Adjusted for the fixed top bar */
+    background-color: white;
+}
+
+#content h1, #content p {
+    margin: 0 0 20px;
+    background-color: inherit;
+}
