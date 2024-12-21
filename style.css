@@ -41,7 +41,7 @@ body {
 .hero {
     position: relative;
     height: 75vh;
-    background-image: url(./fotu1.jpg'); /* Replace with your image URL */
+    background-image: url('./fotu1.jpg'); /* Replace with your image URL */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
